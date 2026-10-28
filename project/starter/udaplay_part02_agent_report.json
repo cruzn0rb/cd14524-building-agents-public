@@ -1,0 +1,102 @@
+[
+  {
+    "query_number": 1,
+    "question": "When were Pokémon Gold and Silver released?",
+    "session_id": "udaplay_rubric_demo",
+    "run_id": "60d1ea16-b35d-426e-8903-39212112a9b2",
+    "workflow_steps": [
+      "__entry__",
+      "message_prep",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor"
+    ],
+    "tools_invoked": [
+      "retrieve_game",
+      "evaluate_retrieval",
+      "retrieve_game",
+      "evaluate_retrieval"
+    ],
+    "evaluations": [
+      {
+        "useful": false,
+        "description": "Retrieval data could not be processed: Expecting property name enclosed in double quotes: line 1 column 3 (char 2). Evaluation could not be completed because the documents have an invalid format."
+      },
+      {
+        "useful": true,
+        "description": "The retrieved document provides relevant information about the game 'Pokémon Gold and Silver,' including the platform (Game Boy Color) and the year of release (1999). This directly answers the user's question regarding the release date of the games. The information is complete as it includes the necessary details about the title and its release year. There are no contradictions or missing facts in the document, and the semantic similarity indicated by the CosineDistance suggests a good match to the user's query. Therefore, the evidence is sufficient to accurately answer the question."
+      }
+    ],
+    "final_answer": "Answer:\nPokémon Gold and Silver were released in 1999 for the Game Boy Color.\n\nSources:\n- SourceID: 006\n\nRetrieval Assessment:\nThe internal evidence was sufficient to answer the question, providing the release year and platform for Pokémon Gold and Silver.\n\nTool Usage:\n1. retrieve_game\n2. evaluate_retrieval",
+    "retrieval_first": true,
+    "evaluation_used": true,
+    "web_search_used": false
+  },
+  {
+    "query_number": 2,
+    "question": "Which was the first 3D platformer Mario game?",
+    "session_id": "udaplay_rubric_demo",
+    "run_id": "bcaa573d-ae29-43d1-b40d-b69756c6448b",
+    "workflow_steps": [
+      "__entry__",
+      "message_prep",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor"
+    ],
+    "tools_invoked": [
+      "retrieve_game",
+      "evaluate_retrieval"
+    ],
+    "evaluations": [
+      {
+        "useful": true,
+        "description": "The retrieved documents contain sufficient evidence to answer the user's question about the first 3D platformer Mario game. The document for 'Super Mario 64' explicitly states that it is a 'groundbreaking 3D platformer' released in 1996 on the Nintendo 64, which aligns perfectly with the user's inquiry. Other retrieved documents, such as 'Super Mario World', are not relevant as they pertain to 2D platforming and were released earlier. The information about 'Super Mario 64' is complete, providing the necessary details about the game's name, platform, and release year. There are no contradictions or missing facts regarding the question, making the evidence sufficient."
+      }
+    ],
+    "final_answer": "Answer:\nThe first 3D platformer Mario game is Super Mario 64, which was released in 1996 for the Nintendo 64.\n\nSources:\n- SourceID: 009\n\nRetrieval Assessment:\nThe internal evidence was sufficient to answer the question, providing clear information about the title, platform, and release year of the first 3D Mario game.\n\nTool Usage:\n1. retrieve_game\n2. evaluate_retrieval",
+    "retrieval_first": true,
+    "evaluation_used": true,
+    "web_search_used": false
+  },
+  {
+    "query_number": 3,
+    "question": "Was Mortal Kombat X released for PlayStation 5?",
+    "session_id": "udaplay_rubric_demo",
+    "run_id": "8d87231d-9f4f-4f86-a537-a23e5cfbd9d1",
+    "workflow_steps": [
+      "__entry__",
+      "message_prep",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor",
+      "tool_executor",
+      "llm_processor"
+    ],
+    "tools_invoked": [
+      "retrieve_game",
+      "evaluate_retrieval",
+      "game_web_search"
+    ],
+    "evaluations": [
+      {
+        "useful": false,
+        "description": "The retrieved documents do not contain any relevant information regarding 'Mortal Kombat X' or its availability on PlayStation 5. The documents list various games, including 'Halo Infinite', 'Marvel's Spider-Man 2', 'Marvel's Spider-Man', 'Mario Kart 8 Deluxe', and 'Minecraft', but none of these titles relate to 'Mortal Kombat X'. Additionally, there is no mention of the release year, publisher, or platform for 'Mortal Kombat X', which are crucial for answering the user's question. Therefore, the evidence is insufficient to determine whether 'Mortal Kombat X' was released for PlayStation 5."
+      }
+    ],
+    "final_answer": "Answer:\nMortal Kombat X was not released for PlayStation 5. It was originally released for PlayStation 4, Xbox One, and PC in April 2015. While it is playable on PlayStation 5 through backward compatibility, there is no specific version of Mortal Kombat X developed for the PlayStation 5.\n\nSources:\n- Information derived from general knowledge about Mortal Kombat X.\n\nRetrieval Assessment:\nThe internal evidence was insufficient to answer the question, leading to a web search for clarification.\n\nTool Usage:\n1. retrieve_game\n2. evaluate_retrieval\n3. game_web_search",
+    "retrieval_first": true,
+    "evaluation_used": true,
+    "web_search_used": true
+  }
+]
